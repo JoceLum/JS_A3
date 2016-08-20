@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipes On The Go App</title>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <!--Animations-->
+  <link rel="stylesheet" href="styles/animate.css">  
+  <!--favicon-->
+  <link type="image/png" href="images/favicon.png" rel="icon">
+  <!--General style sheet-->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+ 
+<div class="banner">    
+  <h1 class="animated bounceInLeft">Recipes On The Go</h1>
+  <h2 class="animated bounceInUp delay">Meals Made Easy For Busy Bodies</h2>
+  <img class="chef" src="images/chef.png">
+</div>
+
+<form>
+  <label for="time">How much time do you have (min)?</label>
+  <label class="tiny">Enter 0 if you don't have any!</label>
+  <input type="text" id="time" placeholder="e.g., 10, 20, 30">
+
+  <p id="timeError"></p>
+
+  <label for="cuisine">What are you feeling for?</label>
+    <select id="cuisine">
+      <option value="default" selected>Please choose one</option>
+      <option value="American">American</option>
+      <option value="Italian">Italian</option>
+      <option value="Asian">Asian</option>
+      <option value="Mexican">Mexican</option>
+      <option value="French">French</option>
+      <option value="Southwestern">Southwestern</option>
+      <option value="Barbecue">Barbecue</option>
+      <option value="Indian">Indian</option>
+      <option value="Chinese">Chinese</option>  
+      <option value="English">English</option>
+      <option value="Mediterranean">Mediterranean</option>
+      <option value="Greek">Greek</option>
+      <option value="Spanish">Spanish</option>
+      <option value="German">German</option>
+      <option value="Thai">Thai</option>
+      <option value="Moroccan">Moroccan</option>
+      <option value="Irish">Irish</option>
+      <option value="Japanese">Japanese</option>
+      <option value="Cuban">Cuban</option>
+      <option value="Hawaiin">Hawaiin</option>
+      <option value="Swedish">Swedish</option>
+      <option value="Hungarian">Hungarian</option>
+      <option value="Portugese">Portugese</option>
+    </select>
+
+    <p id="cuisineError"></p>
+
+    <input type='button' id="submit" value="Lets get cookin'!">
+</form>
+
+<h2 id="ideas"></h2>
+
+<!--Google map for takeout options-->
+<div class="map">
+  <iframe id="gmaps"
+    width="600"
+    height="450"
+    frameborder="0" style="border:0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!--recipe ideas (dynamically added in)-->
+<div class="container" id="recipes"> </div>
+
+<!--to load more recipe ideas-->
+<input type='button' id="loadMore" value="Load More!">
+
+<!--SCRIPTS!-->
+
+<!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<!--Google Map API-->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>  
+
+<!--Javascript-->  
+  <script src="scripts/scripts.js"></script>
+
+</body>
+</html>
